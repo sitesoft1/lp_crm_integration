@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c61b9c6-f75c-4b5e-aacf-95f290f2d419" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upsell/orders/16010027504.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upsell/orders/crm_out_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upsell/orders/post_log.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upsell/send_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/upsell/send_order.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/upsell/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="247">
+              <caret line="64" column="52" lean-forward="true" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -34,22 +30,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/upsell/send_order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="18" column="4" selection-start-line="18" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="308">
+              <caret line="23" column="192" selection-start-line="23" selection-start-column="192" selection-end-line="23" selection-end-column="192" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>gemei 249</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,6 +79,12 @@
               <item name="fino.local" type="462c0819:PsiDirectoryNode" />
               <item name="upsell" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fino.local" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fino.local" type="462c0819:PsiDirectoryNode" />
+              <item name="upsell" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -122,12 +120,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600991451866</updated>
-      <workItem from="1600991453457" duration="10061000" />
+      <workItem from="1600991453457" duration="14491000" />
     </task>
+    <task id="LOCAL-00001" summary="обернул в функцию">
+      <created>1601003844867</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601003844868</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Прописал товары">
+      <created>1601006910528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601006910528</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10061000" />
+    <option name="totallyTimeSpent" value="14491000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -187,6 +200,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="обернул в функцию" />
+    <MESSAGE value="Прописал товары" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прописал товары" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -201,26 +219,35 @@
     <entry file="file://$PROJECT_DIR$/upsell/send/timer.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/upsell/orders/16010027504.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upsell/orders/16010037132.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/upsell/orders/post_log.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/upsell/orders/crm_out_log.txt">
+    <entry file="file://$PROJECT_DIR$/upsell/orders/16010053620.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upsell/orders/16010070327.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/upsell/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+        <state relative-caret-position="247">
+          <caret line="64" column="52" lean-forward="true" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upsell/orders/16010027504.txt">
+    <entry file="file://$PROJECT_DIR$/upsell/orders/crm_out_log.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/upsell/send_order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        <state relative-caret-position="308">
+          <caret line="23" column="192" selection-start-line="23" selection-start-column="192" selection-end-line="23" selection-end-column="192" />
         </state>
       </provider>
     </entry>

