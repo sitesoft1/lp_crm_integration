@@ -39,7 +39,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 	<body class="man">
 
     <script>
-        function sendOrder(name, phone, product_id, price, order_id){
+        function sendOrder(name, phone, product_id, price, order_id, upsell){
             $.ajax({
                 url: 'send_order.php',
                 type: 'post',
@@ -49,10 +49,11 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
                     product_id:product_id,
                     price:price,
                     order_id:order_id,
+                    upsell:upsell
                 }
             });
         }
-        sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '29', '299', '<?php echo $order_id; ?>');
+        sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '29', '299', '<?php echo $order_id; ?>', 0);
     </script>
 
 		<div class="section block-1">
@@ -123,7 +124,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Бритва-триммер Gemei — инновационное устройство, разработанное специально для настоящих мужчин. Разнообразное сочетание насадок и режимов бритья позволяют реализовать любые задумки для идеального внешнего вида.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="gemei 249">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="gemei 249" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '7', '249', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -164,7 +165,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Новый портативный депилятор в стиле губной помады. Мгновенно и безболезненно удаляет волосы даже в самых труднодоступных местах, не вызывает аллергии подходит для любого типа кожи. Одобрен дерматологами!</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="flawless 169">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="flawless 169" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '8', '169', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -203,7 +204,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Пользоваться диспенсером невероятно просто. После того, как вы вставили в него батарейки, необходимо поднять крышку и залить внутрь емкости жидкое мыло, гель для душа или средство для мытья посуды (в зависимости от того, где и для чего вы будете использовать). В общем, подойдет любое жидкое моющее средство. Объем составляет 400 мл. Этого вполне достаточно, чтобы подолгу не беспокоиться о наполнении резервуара средством.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="дозатор мыла 249">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="дозатор мыла 249" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '9', '249', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -242,7 +243,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Heoбычный noдapok с сюрпризом. Жeмчyжинa находится внутри pakoвины с мoллюckoм, зaпeчaтанной в прозрачной бaнoчке. Красивое и оригинальное украшение. Настоящая жемчужина со специальным кулоном для жемчужины и цепочкой в комплекте. Цвет жeмчyжины является сюрпризом, возможны пять вариантов: БЕЛАЯ жемчужина - ЗДОРОВЬЕ; БЕЖЕВАЯ жемчужина -СЧАСТЬЕ; РОЗОВАЯ жемчужина - ЛЮБОВЬ; ЗОЛОТАЯ жемчужина - БОГАТСТВО; ЧЁРНАЯ жемчужина - МУДРОСТЬ</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="жемчужина 179">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="жемчужина 179" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '10', '179', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -283,7 +284,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Добавьте к заказу дополнительный комплект жидкого пластика 5 Second Fix по шокирующей цене! Уникальный пластик-сварка SecondFix безупречно скрепляет всё: от пластика до металла, изделия из дерева или разбитые в дребезги стеклянные вещи! Всего несколько секунд - и ремонт завершен!</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="5 second fix 149">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="5 second fix 149" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '11', '149', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -322,7 +323,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Универсальный чудо-ключ Magic Wrench - удобнейший многофункциональный инструмент, объединивший в себе функции сразу четырех типов ключей: рожкового, разводного, накидного и газового. Незаменимый помощник любого мужчины.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="snap'n grip 159">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="snapn grip 159" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '12', '159', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -364,7 +365,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Мгновенное впитование большого количества жидкости. Натуральный диатомовый минерал. Удаляет запахи. Антибактериальный эффект. Нескользящий и легко моющийся.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="диатомовый коврик 279">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="диатомовый коврик 279" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '13', '279', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -408,7 +409,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>– В стране, где девять месяцев в году идут осадки, придверный коврик для вытирания ног просто необходим. Особенно если это супервпитывающий коврик Clean Step Mat, который «задерживает» грязь и не дает ей распространиться за пределами входа. Знакома ситуация, когда после уборки дома кто-то входит в грязной обуви и всё нужно начинать сначала? Благодаря новому коврику для ног полы будут чистыми гораздо дольше. Абсорбирующие волокна Clean Step Mat моментально впитывают грязь, пыль и даже воду. Кроме того, этот коврик можно использовать снаружи, за дверью, а также для ванной комнаты. Он не скользит, не сворачивается и не забивается под дверь благодаря виниловой основе.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="коврик 229">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="коврик 229" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '14', '229', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -447,7 +448,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Конструктор-липучка - это множество разноцветных лохматых шариков, которые соединяются между собой, как репейники. Дети могут лепить разнообразные фигурки, развивая свою фантазию, образное мышление, а заодно - и мелкую моторику рук.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="bunchems 239">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="bunchems 239" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '15', '239', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -486,7 +487,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Магнитный корректор осанки широкого спектра действия. Самый простой и эффективный способ вернуть себе здоровую осанку и избавиться от болей в спине. Подходит и мужчинам, и женщинам. Можно носить под одеждой.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="корректор осанки 139">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="корректор осанки 139" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '16', '139', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -525,7 +526,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Всего 1 кнопка на ручке кружки мешалки и ваш напиток полностью перемешается. Герметичная крышка! Долго держит температуру! Очень просто мыть!</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="кружка-мешалка 189">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="кружка-мешалка 189" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '17', '189', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -565,7 +566,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Силиконовая крышка-пленка Stretch and Fresh решит все проблемы, связанные с поиском подходящей упаковки для хранения продуктов. Ее надо просто натянуть на тарелку, миску, кастрюлю, и вот у Вас есть герметичная крышка подходящего размера! Кроме того, в пленку можно обернуть сам продукт, растянув ее перед этим.В наборе 4 шт. Крышки-пленки набора кажутся небольшими по размеру, но они растягиваются больше, чем в три раза, и возвращаются в свою первоначальную форму, сколько бы времени они не использовались. </b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="stretch and fresh 149">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="stretch and fresh 149" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '18', '149', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 		
@@ -605,7 +606,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Легендарная маска от черных точек и прыщей Black Mask на основе древесного угля. Уменьшает количество высыпаний в виде прыщей и угревой сыпи, устраняет очаги воспаления, успокаивает раздражения и улучшает цвет лица. Внимание! Товар продается от 2х штук.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="black mask 39">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="black mask 39" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '19', '39', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -646,7 +647,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Добавьте к заказу дополнительный комплект машинки Lint Remover по шокирующей цене! Удалит катышки, не повреждая саму ткань. Супер мощная, работает от сети 220В.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="машинка для удаления катышков 189">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="машинка для удаления катышков 189" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '20', '189', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -684,7 +685,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Невероятно удобный и компактный прибор для заточки, мультифункциональность которого поражает! Вы можете использовать его для работы с самыми разными типами ножей, ножницами, инструментами и даже отвертками. Вам больше не придется тратить часы, чтобы наточить все ножи в доме. Благодаря наличию специальных пазов, заточка всегда происходит под правильным углом, что исключает риск повреждения ножа или инструмента.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="ножеточка 149">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="ножеточка 149" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '21', '149', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -723,7 +724,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Добавьте к заказу дополнительный комплект овощерезки Multi Combine по шокирующей цене! Каждая овощерезка Multi Combine комплектуется большим количеством лезвий и приспособлений для измельчения овощей и фруктов самыми оригинальными формами!</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="nicer dicer 229">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="nicer dicer 229" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '22', '229', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -763,7 +764,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Упаковка вещей- одна из самых сложных процедур при сборке чемодана. Наш набор для организации упаковки багажа решает эту проблему, аккуратно упаковывая всю одежду в наши компактные сумки. Набор для путешествий поможет разложить все вещи по порядку. Одежду в одно место, обувь в другое и аксессуары в третье. Кроме того набор помогает экономить до 40% места в вашем чемодане за счет правильно разложенных вещей в компактных отдельных сумках. Весь набор изготовлен из водоотталкивающего и дышащего материала, так что ваши вещи всегда будут сухими и свежими.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="орг для багажа 229">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="орг для багажа 229" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '23', '229', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -802,7 +803,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Органайзер для обуви позволяет легко и компактно сложить обувь, вмещает 12 пар. Защитный кожух защитит обувь от пыли и влаги. Изготовлен из дышащего материала. Прозрачный верх позволяет быстро найти нужную пару. Подходит для хранения любой обуви.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="орг для обуви 159">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="орг для обуви 159" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '24', '159', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -840,7 +841,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Spot Cleaner - вакуумный очиститель пор для лица, отлично справляется с черными точками, улучшает тональность кожи и придает ей здоровый блеск. Настолько компактный, что помещается даже в карман.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="spot cleaner 159">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="spot cleaner 159" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '5', '159', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -879,7 +880,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Выпрямляет волосы на длительный период. Улучшает структуру волос благодаря ионизации. Избавляет от пушистости. 3 специальных режима! для тонких, нормальных и сильно вьющихся волос..</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="fast hair 229">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="fast hair 229" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '25', '229', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -919,7 +920,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b>Маркато Бисквит - профессиональный кондитерский пистолет, который поможет получить разнообразное печенье ручной работы в домашних условиях или на небольшом кондитерском производстве. Шприц из пищевого анодированного аллюминия, очень прочный и легкий металл, со специальным покрытием и дозатором. Дозатор позволяет делать печение большим размером и маленьким. Поворачиваете регулятор на 180 градусов и можете сами задавать нужный Вам размер. В комплекте идет 20 насадок. Объём - 450 мл.</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="кондитерский шприц 229">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="кондитерский шприц 229" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '26', '229', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
@@ -959,7 +960,7 @@ $send = mail($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFro
 						<p class="tov-info-text"></p>
 						<p><b> Щетка для мытья окон нового поколения. Уникальная технология позволяет осуществлять идеальное мытье и полировку сразу с двух сторон стекла. Ваша задача помыть одну сторону, а со второй справится Glass Wiper!</b></p>
 						<p>&nbsp;</p>
-						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="щетка для окон 149">Добавить к заказу</button>
+						<button class="tov-button animate" data-name="<?php echo $_POST['name']; ?>" data-phone="<?php echo $_POST['phone']; ?>" data-item="щетка для окон 149" onclick="sendOrder('<?php echo $name; ?>', '<?php echo $phone; ?>', '26', '149', '<?php echo $order_id; ?>', 1)">Добавить к заказу</button>
 					</div>
 				</div>
 				
