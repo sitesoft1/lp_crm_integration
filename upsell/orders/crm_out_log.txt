@@ -1,0 +1,21 @@
+Array
+(
+    [status] => ok
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [order_id] => 16010027504
+                    [country] => UA
+                    [site] => fino.local
+                    [ip] => 176.9.76.79
+                )
+
+        )
+
+    [message] => Array
+        (
+            [0] => Заказ успешно добавлен
+        )
+
+)
