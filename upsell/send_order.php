@@ -3,19 +3,17 @@ set_time_limit(0);
 function sendOrder($order_id, $products_list, $name, $phone, $file){
     $products = urlencode(serialize($products_list));
     $sender = urlencode(serialize($_SERVER));
-// параметры запроса
     $data = array(
-        'key'             => '2c12285bc124aa66708425cfc66de3c7', //Ваш секретный токен
-        'order_id'        => $order_id, //идентификатор (код) заказа (*автоматически*)
-        'country'         => 'UA',                         // Географическое направление заказа
-        'office'          => '1',                          // Офис (id в CRM)
-        'products'        => $products,                    // массив с товарами в заказе
-        'bayer_name'      => $name,            // покупатель (Ф.И.О)
-        'phone'           => $phone,           // телефон
+        'key'             => '2c12285bc124aa66708425cfc66de3c7',
+        'order_id'        => $order_id,
+        'country'         => 'UA',
+        'office'          => '1',
+        'products'        => $products,
+        'bayer_name'      => $name,
+        'phone'           => $phone,
         'sender'          => $sender
     );
-
-// запрос
+    
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, 'http://megaslon.lp-crm.biz/api/addNewOrder.html');
     curl_setopt($curl, CURLOPT_POST, true);
@@ -32,10 +30,10 @@ function sendOrder($order_id, $products_list, $name, $phone, $file){
 }
 
 file_put_contents(__DIR__.'/orders/post_log.txt', print_r($_POST, true));
-//Закоментить
+
 $_SERVER['SERVER_ADDR'] = '176.9.76.79';
 $_SERVER['REMOTE_ADDR'] = '176.9.76.79';
-//Закоментить КОНЕЦ
+
 $name = urldecode($_POST['name']);
 $phone = urldecode($_POST['phone']);
 $product_id = urldecode($_POST['product_id']);
@@ -43,10 +41,9 @@ $price = urldecode($_POST['price']);
 $order_id = urldecode($_POST['order_id']);
 $upsell = urldecode($_POST['upsell']);
 $file = __DIR__.'/orders/'.$order_id.'.txt';
-$sleep = 60;
+$sleep = 300;
 
 if($upsell==0){
-    //Запишем в файл данные о заказе
     $products_list = [];
     $products_list[] = array(
         'product_id' => $product_id,
