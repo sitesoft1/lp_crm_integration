@@ -27,13 +27,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/upsell/send_order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="192" selection-start-line="23" selection-start-column="192" selection-end-line="23" selection-end-column="192" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/upsell/orders/crm_out_log.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -120,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600991451866</updated>
-      <workItem from="1600991453457" duration="14491000" />
+      <workItem from="1600991453457" duration="15535000" />
     </task>
     <task id="LOCAL-00001" summary="обернул в функцию">
       <created>1601003844867</created>
@@ -136,11 +141,25 @@
       <option name="project" value="LOCAL" />
       <updated>1601006910528</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил защиту">
+      <created>1601008164892</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601008164892</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Таймаут 5 минут">
+      <created>1601008704320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601008704321</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14491000" />
+    <option name="totallyTimeSpent" value="15535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -152,7 +171,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -203,12 +222,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="обернул в функцию" />
     <MESSAGE value="Прописал товары" />
-    <option name="LAST_COMMIT_MESSAGE" value="Прописал товары" />
+    <MESSAGE value="Добавил защиту" />
+    <MESSAGE value="Таймаут 5 минут" />
+    <option name="LAST_COMMIT_MESSAGE" value="Таймаут 5 минут" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -234,6 +252,9 @@
     <entry file="file://$PROJECT_DIR$/upsell/orders/16010070327.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/upsell/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -241,15 +262,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upsell/orders/crm_out_log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/upsell/send_order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="192" selection-start-line="23" selection-start-column="192" selection-end-line="23" selection-end-column="192" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upsell/orders/crm_out_log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

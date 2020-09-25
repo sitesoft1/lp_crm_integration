@@ -76,6 +76,7 @@ else{
             'price' => $price,
             'count' => '1'
         );
+        $order_id = number_format(round(microtime(true)*10),0,'.','');
         sendOrder($order_id, $products_list, $name, $phone, $file);
     }
 }
